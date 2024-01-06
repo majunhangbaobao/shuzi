@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial=1.0">
+		<title>数字火炬</title>
+		<style>
+			.bg{
+				background-color: aquamarine;
+				width:100%;
+				height:100%;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			div{
+				position: relative;
+				width: 400px;
+				margin: 0 auto;
+			}
+			img{
+				width: 500px;
+				height: 600px;
+			}
+			ul{
+				position: absolute;
+				buttom: 10px;
+				right: 10px;
+			}
+			ul>li{
+				width: 25px;
+				height: 25px;
+				text-align: center;
+				line-height: 25px;
+				background-color: rgba(0, 0, 0, 0.2);
+				margin: 5px;
+				display: inline-block;
+				color: #fff;
+				cursor: pointer;
+			}
+			ul>li:hover{
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg">
+			<div style="float: left;letter-spacing: 5px;font-size: 20px;line-height: 40px;">杭州亚运会打造了史上参与人数最多的亚运会开幕式点火仪式。
+			去年11月，杭州亚组委推出“亚运数字火炬手”活动，向全球发出争当“亚运数字火炬手”的邀请。
+			6月15日，杭州亚运会倒计时100天，线上火炬传递启动，整个活动参与总人数突破1亿人，意味着超过1亿人共同点燃了亚运会主火炬。
+			亿万人线上火炬接力，展示了浙江快速发展的数字技术，这一发展成果也给全球各项事业赋能。
+			亚运火炬是开放的，容得下所有人的梦想。数字接力点火是永恒的，每一个梦想都将“永存”。
+			“心心相融，爱达未来”。</div>
+			<div style="float: right; left;letter-spacing: 5px;font-size: 20px;line-height: 40px;">亚运会是体育健儿摘金夺银的赛场，也是人们传递梦想、展示激情的舞台。
+			其中有亿万普通人的身影，他们是人生赛场上的英雄。
+			点击鼠标，联通的是整个世界。杭州深入参与数字领域国际合作，积极打造“数字丝绸之路”枢纽，发挥自贸试验区杭州片区与跨境电商综试区叠加效应。
+			越来越多的人在数字技术带来的便利中实现信息沟通、资源共享、生产力提升。
+			这种合作共享，犹如数字火炬接力跨越空间限制，犹如杭州亚运会主题歌所唱“同呼吸同感受同梦想，同爱同在同分享”。</div>
+			<div>
+				<img src="https://majunhangbaobao.github.io/mjh225701219/机器狗/数字1.jpg" >
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			var img = document.querySelector('img');
+			var ul = document.querySelector('ul');
+			for(var i = 0;i<ul.children.length;i++){
+				var index=i+1;
+				ul.children[i].setAttribute('index',index);
+				ul.children[i].addEventListener('click',function(){
+					//console.log(this.getAttribute('index'));
+				img.src = 'https://majunhangbaobao.github.io/mjh225701219/机器狗/数字' + this.getAttribute('index') + '.jpg'
+				})
+			}
+		</script>
+	</body>
+</html>
